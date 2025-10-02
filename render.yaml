@@ -1,0 +1,18 @@
+services:
+  - type: worker
+    name: telegram-finance-bot
+    env: python
+    rootDir: .
+    plan: free
+    buildCommand: |
+      pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: |
+      python -u bot.py
+    envVars:
+      - key: API_TOKEN
+        sync: false  # set in Render dashboard or via blueprint secrets
+    # Uncomment to attach a persistent disk for SQLite
+    # disks:
+    #   - name: data
+    #     mountPath: /data
+    #     sizeGB: 1 

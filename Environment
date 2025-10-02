@@ -1,0 +1,12 @@
+# Environment variables for the Telegram finance bot
+
+# REQUIRED: Telegram Bot API token (from @BotFather)
+# Replace the placeholder with your actual token before running
+API_TOKEN=7396928376:AAF1ntTQegPVS8GkOao44GQUCILyyTTsCB8
+
+# OPTIONAL: Path to SQLite database file
+# Local default (recommended for development):
+DB_PATH=./finance.db
+
+# If deploying on Render with a Persistent Disk, use:
+# DB_PATH=/data/finance.db 
